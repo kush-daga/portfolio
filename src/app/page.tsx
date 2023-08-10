@@ -1,6 +1,8 @@
 "use client";
 
 import { Luckiest_Guy, Indie_Flower } from "next/font/google";
+import SquigglyLine from "../../public/squiggly_1.svg";
+
 import {
 	motion,
 	useScroll,
@@ -10,7 +12,11 @@ import {
 	circInOut,
 	easeOut,
 } from "framer-motion";
+
+import Image from "next/image";
+
 import { useRef } from "react";
+import { type } from "os";
 
 const luckiestGuy = Luckiest_Guy({
 	weight: ["400"],
@@ -77,7 +83,7 @@ export default function Home() {
 					}}
 				>
 					<motion.div
-						className="h-screen w-screen fixed inset-0  top-0 !m-0 z-10"
+						className="h-screen w-screen fixed inset-0  top-0 !m-0 z-10 select-none pointer-events-none"
 						style={{ background: overlayBg }}
 					></motion.div>
 					<motion.div
@@ -103,15 +109,106 @@ export default function Home() {
 								style={{
 									fontSize: "96px",
 									marginTop: "-48px",
-									userSelect: "none",
+									display: "flex",
+									cursor: "pointer",
+									// userSelect: "none",
 								}}
 							>
-								Daga
+								<motion.div
+									initial={{
+										rotateZ: 0,
+										// x: -5,
+									}}
+									whileHover={{
+										rotateZ: 5,
+										// x: 5,
+									}}
+									transition={{
+										duration: 0.1,
+										type: "spring",
+										// bounce: 0.25,
+										damping: 15,
+										stiffness: 500,
+									}}
+									style={{
+										transformOrigin: "top center",
+									}}
+									className="drop-shadow-lg hover:drop-shadow-2xl"
+								>
+									D
+								</motion.div>
+								<motion.div
+									initial={{
+										rotateZ: 0,
+										// x: -5,
+									}}
+									whileHover={{
+										rotateZ: -10,
+										// x: 5,
+									}}
+									transition={{
+										duration: 0.1,
+										type: "spring",
+										damping: 15,
+										stiffness: 500,
+									}}
+									style={{
+										transformOrigin: "top center",
+									}}
+									className="drop-shadow-lg hover:drop-shadow-2xl transition-shadow"
+								>
+									A
+								</motion.div>
+								<motion.div
+									initial={{
+										rotateZ: 0,
+										// x: -5,
+									}}
+									whileHover={{
+										rotateZ: 8,
+										// x: 5,
+									}}
+									transition={{
+										duration: 0.1,
+										type: "spring",
+										// bounce: 0.25,
+										damping: 15,
+										stiffness: 500,
+									}}
+									style={{
+										transformOrigin: "top center",
+									}}
+									className="drop-shadow-lg hover:drop-shadow-2xl"
+								>
+									G
+								</motion.div>
+								<motion.div
+									initial={{
+										rotateZ: 0,
+										// x: -5,
+									}}
+									whileHover={{
+										rotateZ: -8,
+										// x: 5,
+									}}
+									transition={{
+										duration: 0.1,
+										type: "spring",
+										damping: 15,
+										stiffness: 500,
+									}}
+									style={{
+										transformOrigin: "top center",
+									}}
+									className="drop-shadow-lg hover:drop-shadow-2xl transition-shadow"
+								>
+									A
+								</motion.div>
 							</div>
-							<div className="text-[24px] text-center max-w-[418px]">
+							<div className="text-[24px] text-center max-w-[418px] uppercase">
 								A Super fun Dev with a serious interest in designing delightful
 								experiences.
-								<br /> I have a memory of a goldfish 🐟
+								<br /> I have the memory of a goldfish 🐟
 							</div>
 						</div>
 					</motion.div>
@@ -132,7 +229,17 @@ export default function Home() {
 							borderRadius: margin2,
 						}}
 					>
-						yoooo
+						<motion.h2
+							className="text-[#2b4038] text-[48px] font-black text-center flex flex-col justify-center items-center"
+							style={{
+								opacity: scrollYProgress,
+							}}
+						>
+							Work Voyage
+							<div>
+								<Image alt="helo" src={SquigglyLine}></Image>
+							</div>
+						</motion.h2>
 					</motion.div>
 				</motion.section>
 			</motion.div>
