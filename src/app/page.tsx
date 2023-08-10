@@ -17,6 +17,7 @@ import Image from "next/image";
 
 import { useRef } from "react";
 import { type } from "os";
+import AnimatedLetterHero from "~/components/AnimatedLetterHero";
 
 const luckiestGuy = Luckiest_Guy({
 	weight: ["400"],
@@ -114,96 +115,18 @@ export default function Home() {
 									// userSelect: "none",
 								}}
 							>
-								<motion.div
-									initial={{
-										rotateZ: 0,
-										// x: -5,
-									}}
-									whileHover={{
-										rotateZ: 5,
-										// x: 5,
-									}}
-									transition={{
-										duration: 0.1,
-										type: "spring",
-										// bounce: 0.25,
-										damping: 15,
-										stiffness: 500,
-									}}
-									style={{
-										transformOrigin: "top center",
-									}}
-									className="drop-shadow-lg hover:drop-shadow-2xl"
-								>
+								<AnimatedLetterHero directionToRotate="left">
 									D
-								</motion.div>
-								<motion.div
-									initial={{
-										rotateZ: 0,
-										// x: -5,
-									}}
-									whileHover={{
-										rotateZ: -10,
-										// x: 5,
-									}}
-									transition={{
-										duration: 0.1,
-										type: "spring",
-										damping: 15,
-										stiffness: 500,
-									}}
-									style={{
-										transformOrigin: "top center",
-									}}
-									className="drop-shadow-lg hover:drop-shadow-2xl transition-shadow"
-								>
+								</AnimatedLetterHero>
+								<AnimatedLetterHero directionToRotate="right">
 									A
-								</motion.div>
-								<motion.div
-									initial={{
-										rotateZ: 0,
-										// x: -5,
-									}}
-									whileHover={{
-										rotateZ: 8,
-										// x: 5,
-									}}
-									transition={{
-										duration: 0.1,
-										type: "spring",
-										// bounce: 0.25,
-										damping: 15,
-										stiffness: 500,
-									}}
-									style={{
-										transformOrigin: "top center",
-									}}
-									className="drop-shadow-lg hover:drop-shadow-2xl"
-								>
+								</AnimatedLetterHero>
+								<AnimatedLetterHero directionToRotate="left">
 									G
-								</motion.div>
-								<motion.div
-									initial={{
-										rotateZ: 0,
-										// x: -5,
-									}}
-									whileHover={{
-										rotateZ: -8,
-										// x: 5,
-									}}
-									transition={{
-										duration: 0.1,
-										type: "spring",
-										damping: 15,
-										stiffness: 500,
-									}}
-									style={{
-										transformOrigin: "top center",
-									}}
-									className="drop-shadow-lg hover:drop-shadow-2xl transition-shadow"
-								>
+								</AnimatedLetterHero>
+								<AnimatedLetterHero directionToRotate="right">
 									A
-								</motion.div>
+								</AnimatedLetterHero>
 							</div>
 							<div className="text-[24px] text-center max-w-[418px] uppercase">
 								A Super fun Dev with a serious interest in designing delightful
