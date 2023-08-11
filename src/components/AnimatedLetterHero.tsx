@@ -14,7 +14,7 @@ const AnimatedLetterHero: React.FC<AnimatedLetterHeroProps> = ({
 	directionToRotate,
 	playSound = true,
 }) => {
-	const [play, { stop }] = useSound("/gate-squeek-final.mp3", { volume: 0.75 });
+	const [play, { stop }] = useSound("/gate-squeek-final.mp3", { volume: 0.35 });
 
 	return (
 		<motion.div
