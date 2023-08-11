@@ -2,6 +2,7 @@
 
 import { Luckiest_Guy, Indie_Flower } from "next/font/google";
 import SquigglyLine from "../../public/squiggly_1.svg";
+//@ts-ignore
 
 import {
 	motion,
